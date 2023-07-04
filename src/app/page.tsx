@@ -14,12 +14,13 @@ export default function Home() {
   const [mode,setMode]:[boolean, React.Dispatch<React.SetStateAction<boolean>>]=useState(true)
   const refHeader=useRef(null)
   const refAbout=useRef(null)
+  const refSkills=useRef(null)
   return (
     <ModeContext.Provider value={{mode,setMode}}>
       <main className={styles.main} style={{backgroundColor:mode ? 'white' : 'black'}}>
-        <Header refHeader={refHeader} refAbout={refAbout}/>
+        <Header refHeader={refHeader} refAbout={refAbout} refSkills={refSkills}/>
         <About refAbout={refAbout}/>
-        <Skills />
+        <Skills refSkills={refSkills}/>
         <Projects />
         <Contact />
       </main>

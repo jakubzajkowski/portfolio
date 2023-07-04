@@ -8,9 +8,10 @@ import { ModeContext,ModeContextType } from '../ModeContext';
 interface NavProps{
     refHeader: any
     refAbout:any
+    refSkills:any
  }
 
-export default function Nav({refHeader,refAbout}:NavProps): ReturnType<FC> {
+export default function Nav({refHeader,refAbout,refSkills}:NavProps): ReturnType<FC> {
     const [color,setColor]:[string, React.Dispatch<React.SetStateAction<string>>]=useState('')
     const {mode,setMode} = useContext(ModeContext) as ModeContextType
     useEffect(():void=>{
@@ -26,7 +27,7 @@ export default function Nav({refHeader,refAbout}:NavProps): ReturnType<FC> {
         <div className={styles.navOptions as string}>
             <HomeIcon color={color} element={refHeader}/>
             <AboutIcon color={color} element={refAbout}/>
-            <SkillsIcon color={color} element={refHeader}/>
+            <SkillsIcon color={color} element={refSkills}/>
             <ProjectsIcon color={color} element={refHeader}/>
             <ContactIcon color={color} element={refHeader}/>
             <ModeIcon color={color} setMode={setMode} />
