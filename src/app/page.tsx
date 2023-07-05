@@ -15,13 +15,14 @@ export default function Home() {
   const refHeader=useRef(null)
   const refAbout=useRef(null)
   const refSkills=useRef(null)
+  const refProjects=useRef(null)
   return (
     <ModeContext.Provider value={{mode,setMode}}>
       <main className={styles.main} style={{backgroundColor:mode ? 'white' : 'black'}}>
-        <Header refHeader={refHeader} refAbout={refAbout} refSkills={refSkills}/>
+        <Header refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
         <About refAbout={refAbout}/>
         <Skills refSkills={refSkills}/>
-        <Projects />
+        <Projects refProjects={refProjects}/>
         <Contact />
       </main>
     </ModeContext.Provider>

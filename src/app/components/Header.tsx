@@ -10,14 +10,15 @@ interface HeaderProps{
    refHeader: any
    refAbout: any
    refSkills: any
+   refProjects: any
 }
 
-export default function Header({refHeader,refAbout,refSkills}:HeaderProps): ReturnType<FC> {
+export default function Header({refHeader,refAbout,refSkills,refProjects}:HeaderProps): ReturnType<FC> {
   const {mode} = useContext(ModeContext) as ModeContextType
   const mobile:boolean = window.matchMedia("(max-width: 950px)").matches
   return (
     <div className={styles.header} ref={refHeader}>
-        <Nav refHeader={refHeader} refAbout={refAbout} refSkills={refSkills}/>
+        <Nav refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
         <div className={styles.canvasContainer}>
           <Canvas className={styles.canvas} style={{backgroundColor:mode ? 'white' : 'black'}} camera={{position:[0,0.3,0.8]}} >
           <pointLight position={[0,1,0]} />
