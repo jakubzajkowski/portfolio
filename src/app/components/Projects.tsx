@@ -18,8 +18,8 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
           <p><h4>Frontend:</h4> html,Js,css,bootstrap</p>
           <p><h4>Server:</h4> php, laravel</p>
           <p><h4>Database:</h4> sql</p>
-          <button className={styles.projects__btnXchange}>Visit Site</button>
-          <button className={styles.projects__btnXchange}>Visit GitHub</button>
+          <a href={process.env.NEXT_PUBLIC_XCHANGE_LINK} style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnXchange}>Visit Site</button></a>
+          <a href={process.env.NEXT_PUBLIC_XCHANGE_GITHUB_LINK} style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnXchange}>Visit GitHub</button></a>
           <Image style={{display:'block',width:'100%',height:'100%'}} src={InstaImg} alt="xd" />
         </div>
         <div className={styles.projects__project}>
@@ -28,8 +28,8 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
           <p><h4>Frontend:</h4> js, react</p>
           <p><h4>Server:</h4> js, node.js, express</p>
           <p><h4>Database:</h4> mongoDB</p>
-          <button className={styles.projects__btnInsta}>Visit Site</button>
-          <button className={styles.projects__btnInsta}>Visit GitHub</button>
+          <a href={process.env.NEXT_PUBLIC_INSTACLONE_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnInsta}>Visit Site</button></a>
+          <a href={process.env.NEXT_PUBLIC_INSTACLONE_GITHUB_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnInsta}>Visit GitHub</button></a>
           <Image style={{display:'block',width:'100%',height:'100%'}} src={InstaImg} alt="xd" />
         </div>
         <div className={styles.projects__project}>
@@ -38,8 +38,8 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
           <p><h4>Frontend:</h4> js, react</p>
           <p><h4>Server:</h4> ts, node.js, express</p>
           <p><h4>Database:</h4> sql</p>
-          <button className={styles.projects__btnApple}>Visit Site</button>
-          <button className={styles.projects__btnApple}>Visit GitHub</button>
+          <a href={process.env.NEXT_PUBLIC_APPLECLONE_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnApple}>Visit Site</button></a>
+          <a href={process.env.NEXT_PUBLIC_APPLECLONE_GITHUB_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnApple}>Visit GitHub</button></a>
           <Image style={{display:'block',width:'100%',height:'100%'}} src={InstaImg} alt="xd" />
         </div>
     </div>

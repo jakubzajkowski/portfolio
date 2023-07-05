@@ -18,9 +18,9 @@ export default function Skills({refSkills}:SkillsProps): ReturnType<FC> {
       </div>
       <div className={styles.skills__content}>{
         skills ? 
-          SkillList.map(skill=><Skill key={skill.title} img={skill.img} desc={skill.desc} title={skill.title}/>)
+          SkillList.map(skill=><Skill level={skill.level} key={skill.title} img={skill.img} desc={skill.desc} title={skill.title}/>)
           : 
-          SoftSkillList.map(skill=><Skill key={skill.title} img={skill.img} desc={skill.desc} title={skill.title}/>)
+          SoftSkillList.map(skill=><Skill level={1} key={skill.title} img={skill.img} desc={skill.desc} title={skill.title}/>)
       }
       </div>
     </div>
