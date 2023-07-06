@@ -3,6 +3,8 @@ import styles from '../page.module.scss'
 import { FC,useContext } from 'react'
 import { ModeContext,ModeContextType } from '../ModeContext';
 import InstaImg from './img/instagram.jpg'
+import XchangeImg from './img/xchange.jpg'
+import AppleImg from './img/apple.jpg'
 
 interface ProjectsProps{
   refProjects: any
@@ -18,9 +20,9 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
           <p><h4>Frontend:</h4> html,Js,css,bootstrap</p>
           <p><h4>Server:</h4> php, laravel</p>
           <p><h4>Database:</h4> sql</p>
-          <a href={process.env.NEXT_PUBLIC_XCHANGE_LINK} style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnXchange}>Visit Site</button></a>
-          <a href={process.env.NEXT_PUBLIC_XCHANGE_GITHUB_LINK} style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnXchange}>Visit GitHub</button></a>
-          <Image style={{display:'block',width:'100%',height:'100%'}} src={InstaImg} alt="xd" />
+          <a target="_blank" href={process.env.NEXT_PUBLIC_XCHANGE_LINK} style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnXchange}>Visit Site</button></a>
+          <a target="_blank" href={process.env.NEXT_PUBLIC_XCHANGE_GITHUB_LINK} style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnXchange}>Visit GitHub</button></a>
+          <Image style={{display:'block',width:'100%',height:'100%',boxShadow: '0px 0px 10px 1px rgba(103, 103, 103, 1)'}} src={XchangeImg} alt="xd" />
         </div>
         <div className={styles.projects__project}>
           <h1 style={{color:'rgb(138, 0, 138)'}}>Instagram Clone</h1>
@@ -28,9 +30,9 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
           <p><h4>Frontend:</h4> js, react</p>
           <p><h4>Server:</h4> js, node.js, express</p>
           <p><h4>Database:</h4> mongoDB</p>
-          <a href={process.env.NEXT_PUBLIC_INSTACLONE_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnInsta}>Visit Site</button></a>
-          <a href={process.env.NEXT_PUBLIC_INSTACLONE_GITHUB_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnInsta}>Visit GitHub</button></a>
-          <Image style={{display:'block',width:'100%',height:'100%'}} src={InstaImg} alt="xd" />
+          <a target="_blank" href={process.env.NEXT_PUBLIC_INSTACLONE_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnInsta}>Visit Site</button></a>
+          <a target="_blank" href={process.env.NEXT_PUBLIC_INSTACLONE_GITHUB_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnInsta}>Visit GitHub</button></a>
+          <Image style={{display:'block',width:'100%',height:'100%',boxShadow: '0px 0px 10px 1px rgba(103, 103, 103, 1)'}} src={InstaImg} alt="xd" />
         </div>
         <div className={styles.projects__project}>
           <h1 style={{color:'rgb(157, 255, 0)'}}>Apple Clone</h1>
@@ -38,9 +40,9 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
           <p><h4>Frontend:</h4> js, react</p>
           <p><h4>Server:</h4> ts, node.js, express</p>
           <p><h4>Database:</h4> sql</p>
-          <a href={process.env.NEXT_PUBLIC_APPLECLONE_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnApple}>Visit Site</button></a>
-          <a href={process.env.NEXT_PUBLIC_APPLECLONE_GITHUB_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnApple}>Visit GitHub</button></a>
-          <Image style={{display:'block',width:'100%',height:'100%'}} src={InstaImg} alt="xd" />
+          <a target="_blank" href={process.env.NEXT_PUBLIC_APPLECLONE_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnApple}>Visit Site</button></a>
+          <a target="_blank" href={process.env.NEXT_PUBLIC_APPLECLONE_GITHUB_LINK}  style={{textDecoration:'none',color:'white'}}><button className={styles.projects__btnApple}>Visit GitHub</button></a>
+          <Image style={{display:'block',width:'100%',height:'100%',boxShadow: '0px 0px 10px 1px rgba(103, 103, 103, 1)'}} src={AppleImg} alt="xd" />
         </div>
     </div>
   )

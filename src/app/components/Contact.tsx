@@ -7,7 +7,11 @@ import Iphone from './Iphone';
 import {motion} from 'framer-motion'
 import AxiosContact from './helpers/AxiosContact';
 
-export default function Contact(): ReturnType<FC> {
+interface ContactProps{
+  refContact: any
+}
+
+export default function Contact({refContact}:ContactProps): ReturnType<FC> {
   const {mode} = useContext(ModeContext) as ModeContextType
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
@@ -27,7 +31,7 @@ export default function Contact(): ReturnType<FC> {
     setName('')
   }
   return (
-    <div className={styles.contact}>
+    <div ref={refContact} className={styles.contact}>
     <div className={styles.contact__container}>
       <div className={styles.contact__model}>
         <Canvas className={styles.canvas} style={{backgroundColor:mode ? 'white' : 'black'}} camera={{position:[0,0,2.8]}} >

@@ -10,20 +10,22 @@ import Contact from './components/Contact'
 import { ModeContext } from './ModeContext'
 import { useState,useRef } from 'react'
 
+
 export default function Home() {
   const [mode,setMode]:[boolean, React.Dispatch<React.SetStateAction<boolean>>]=useState(true)
   const refHeader=useRef(null)
   const refAbout=useRef(null)
   const refSkills=useRef(null)
   const refProjects=useRef(null)
+  const refContact=useRef(null)
   return (
     <ModeContext.Provider value={{mode,setMode}}>
       <main className={styles.main} style={{backgroundColor:mode ? 'white' : 'black'}}>
-        <Header refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
+        <Header refContact={refContact} refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
         <About refAbout={refAbout}/>
         <Skills refSkills={refSkills}/>
         <Projects refProjects={refProjects}/>
-        <Contact />
+        <Contact refContact={refContact}/>
       </main>
     </ModeContext.Provider>
   )
