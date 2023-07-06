@@ -4,7 +4,6 @@ import { FC,useContext } from 'react'
 import { ModeContext,ModeContextType } from '../ModeContext';
 import { Canvas } from '@react-three/fiber';
 import Avatar from './Avatar';
-import { motion } from "framer-motion";
 
 interface AboutProps{
     refAbout: any
@@ -21,7 +20,7 @@ export default function About({refAbout}:AboutProps): ReturnType<FC> {
             <Avatar loader='./animated_instructor_avatar.glb'/>
           </Canvas>
           </div>
-          <motion.p initial={{opacity:0}} whileInView={{opacity:1,y:['100%','0%']}} transition={{duration:'0.4'}} viewport={{ once: true }} className={styles.about__content} style={{color:mode ? 'black':'white'}}>{"Welcome to my portfolio! I'm Jakub a 20-year-old aspiring developer and recent graduate from an IT technical school. I'm thrilled to share my journey as I dive into the world of technology. Currently, I'm excitedly preparing to pursue a degree in mechatronics at Warsaw University of Technology. My passion lies in coding, and I find great joy in working with JavaScript, React, Node.js, and PHP. These versatile languages have allowed me to bring ideas to life and create dynamic, interactive web applications. I believe in the power of technology to transform lives and solve complex problems.I'm constantly seeking new challenges and opportunities to expand my knowledge and collaborate with others in the tech community. Whether it's designing intuitive user interfaces or building robust backend systems, I'm eager to contribute my skills and make a positive impact. Feel free to reach out if you have any questions or if you're interested in collaborating on exciting projects. Let's connect and create something extraordinary together!"}</motion.p>
+          <p className={styles.about__content} style={{color:mode ? 'black':'white'}}>{"Welcome to my portfolio! I'm Jakub a 20-year-old aspiring developer and recent graduate from an IT technical school. I'm thrilled to share my journey as I dive into the world of technology. Currently, I'm excitedly preparing to pursue a degree in mechatronics at Warsaw University of Technology. My passion lies in coding, and I find great joy in working with JavaScript, React, Node.js, and PHP. These versatile languages have allowed me to bring ideas to life and create dynamic, interactive web applications. I believe in the power of technology to transform lives and solve complex problems.I'm constantly seeking new challenges and opportunities to expand my knowledge and collaborate with others in the tech community. Whether it's designing intuitive user interfaces or building robust backend systems, I'm eager to contribute my skills and make a positive impact. Feel free to reach out if you have any questions or if you're interested in collaborating on exciting projects. Let's connect and create something extraordinary together!"}</p>
         </div>
         <h1 className={styles.about__title}>About Me</h1>
     </div>
