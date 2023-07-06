@@ -1,6 +1,6 @@
 "use client";
 import styles from '../page.module.scss'
-import { FC,useContext } from 'react'
+import { FC,useContext,useEffect,useState } from 'react'
 import Nav from './Nav'
 import { Canvas} from '@react-three/fiber'
 import Model from './Model';
@@ -16,7 +16,12 @@ interface HeaderProps{
 
 export default function Header({refContact,refHeader,refAbout,refSkills,refProjects}:HeaderProps): ReturnType<FC> {
   const {mode} = useContext(ModeContext) as ModeContextType
-  const mobile:boolean = window.matchMedia("(max-width: 950px)").matches
+  const [mobile,setMobile]:[boolean, React.Dispatch<React.SetStateAction<boolean>>]=useState(false)
+  useEffect(()=>{
+    if (typeof window != "undefined") {
+      setMobile(window.matchMedia("(max-width: 950px)").matches)
+    }
+  })
   return (
     <div className={styles.header} ref={refHeader}>
         <Nav refContact={refContact} refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
