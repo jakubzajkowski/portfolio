@@ -2,9 +2,8 @@ import Image from 'next/image'
 import styles from '../page.module.scss'
 import { ChangeEvent, FC, useContext, useState} from 'react'
 import { ModeContext,ModeContextType } from '../ModeContext';
-import { Canvas } from '@react-three/fiber';
-import Iphone from './Iphone';
 import AxiosContact from './helpers/AxiosContact';
+import { Parallax } from 'react-scroll-parallax';
 
 interface ContactProps{
   refContact: any
@@ -32,15 +31,12 @@ export default function Contact({refContact}:ContactProps): ReturnType<FC> {
   return (
     <div ref={refContact} className={styles.contact}>
     <div className={styles.contact__container}>
-      <div className={styles.contact__model}>
-        <Canvas className={styles.canvas} style={{backgroundColor:mode ? 'white' : 'black'}} camera={{position:[0,0,2.8]}} >
-          <ambientLight position={[0,1,0]} intensity={1.2}/>
-        <Iphone loader='./free_iphone_13_pro_2021.glb'/>
-      </Canvas>
-      </div>
+      <Parallax speed={10} opacity={[0,1]} style={{color: mode ? 'black': 'white'}}>
+        <h1 className={styles.contact__slides_section_ending}>Say Hello</h1>
+      </Parallax>
       <div className={styles.contact__form} style={{color:mode ? 'black':'white'}}>
         <form onSubmit={(e)=>handleSubmit(e)} action="">
-          <h1>Contact</h1>
+          <h1 style={{fontSize:'70px'}}>Contact</h1>
           <p>{"It's Easy. Fill the Form"}</p>
           <p style={{margin:'3rem 0 0 0'}}>Full Name</p>
           <input className={styles.contact__input} onChange={(e)=>setName(e.target.value)} style={{display:'block'}} type="text" />

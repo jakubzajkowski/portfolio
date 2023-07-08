@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import { ModeContext } from './ModeContext'
 import { useState,useRef } from 'react'
+import {ParallaxProvider} from 'react-scroll-parallax';
 
 
 export default function Home() {
@@ -21,11 +22,13 @@ export default function Home() {
   return (
     <ModeContext.Provider value={{mode,setMode}}>
       <main className={styles.main} style={{backgroundColor:mode ? 'white' : 'black'}}>
-        <Header refContact={refContact} refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
-        <About refAbout={refAbout}/>
-        <Skills refSkills={refSkills}/>
-        <Projects refProjects={refProjects}/>
-        <Contact refContact={refContact}/>
+        <ParallaxProvider>
+          <Header refContact={refContact} refHeader={refHeader} refAbout={refAbout} refSkills={refSkills} refProjects={refProjects}/>
+          <About refAbout={refAbout}/>
+          <Skills refSkills={refSkills}/>
+          <Projects refProjects={refProjects}/>
+          <Contact refContact={refContact}/>
+        </ParallaxProvider>
       </main>
     </ModeContext.Provider>
   )
