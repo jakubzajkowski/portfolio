@@ -4,6 +4,7 @@ import { ChangeEvent, FC, useContext, useState} from 'react'
 import { ModeContext,ModeContextType } from '../ModeContext';
 import AxiosContact from './helpers/AxiosContact';
 import { Parallax } from 'react-scroll-parallax';
+import CircularProgress from '@mui/material/CircularProgress';
 
 interface ContactProps{
   refContact: any
@@ -15,13 +16,15 @@ export default function Contact({refContact}:ContactProps): ReturnType<FC> {
   const [email,setEmail]=useState('')
   const [message,setMessage]=useState('')
   const [serverMessage,setServerMessage]=useState('')
+  const [loading,setLoading]=useState(false)
   const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault()
     const data = {
       name: name,
       email:email,
       message: message,
-      setServerMessage: setServerMessage
+      setServerMessage: setServerMessage,
+      setLoading:setLoading
     }
     AxiosContact(data)
     setEmail('')
@@ -39,12 +42,12 @@ export default function Contact({refContact}:ContactProps): ReturnType<FC> {
           <h1 style={{fontSize:'70px'}}>Contact</h1>
           <p>{"It's Easy. Fill the Form"}</p>
           <p style={{margin:'3rem 0 0 0'}}>Full Name</p>
-          <input className={styles.contact__input} onChange={(e)=>setName(e.target.value)} style={{display:'block'}} type="text" />
+          <input className={styles.contact__input} onChange={(e)=>setName(e.target.value)} value={name} style={{display:'block'}} type="text" />
           <p>Email</p>
-          <input className={styles.contact__input} onChange={(e)=>setEmail(e.target.value)} style={{display:'block'}} type="text" />
+          <input className={styles.contact__input} onChange={(e)=>setEmail(e.target.value)} value={email} style={{display:'block'}} type="text" />
           <p>Message</p>
-          <textarea className={styles.contact__textarea} onChange={(e)=>setMessage(e.target.value)} style={{display:'block'}}></textarea>
-          <p style={{fontSize:'0.8rem'}}>{serverMessage}</p>
+          <textarea className={styles.contact__textarea} onChange={(e)=>setMessage(e.target.value)} value={message} style={{display:'block'}}></textarea>
+          {loading ? <CircularProgress /> : <p style={{fontSize:'0.8rem'}}>{serverMessage}</p>}
           <input className={styles.contact__submit} type="submit" value="Submit" />
         </form>
       </div>
