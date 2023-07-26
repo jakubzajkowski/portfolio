@@ -50,8 +50,8 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
         </motion.div>
         <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>XChange Website</h1>
-          <p style={{margin:'2rem 0 2rem 0'}}>XchangeStock is a web application that allows users to view daily currency prices, explore historical currency charts, and stay updated with the latest news related to currencies.</p>
-          <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('xChange Website')}>Working on deploy</button>
+          <p style={{margin:'2rem 0 2rem 0'}}>XchangeStock is a web application that allows users to view daily currency prices, explore historical currency charts, and stay updated with the latest news related to currencies. Built with php laravel and mysql</p>
+          <button className={styles.projects__rigth__project_btn}>Working on</button>
           <Image className={styles.projects__rigth__project_img} src={XchangeImg} alt='insta'/>
         </motion.div>
       </div>
