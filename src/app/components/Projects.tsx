@@ -39,12 +39,14 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
         <motion.div className={styles.projects__rigth__project}  initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>Instagram Website Clone</h1>
           <p style={{margin:'2rem 0 2rem 0'}}>InstaClone is a feature-rich web application that emulates the core functionalities of the popular social media platform, Instagram. With InstaClone, users can create profiles, share photos, follow other users, and engage with a vibrant community.</p>
+          <p style={{fontSize:'0.8rem',margin: '1rem 0'}}>To load app sometimes can take time because this instance types will spin down with inactivity.</p>
           <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('Instagram Clone')}>Explore</button>
           <Image className={styles.projects__rigth__project_img} src={InstaImg} alt='insta'/>
         </motion.div>
         <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>Apple Website Clone</h1>
           <p style={{margin:'2rem 0 2rem 0'}}>This project aims to replicate the design and functionalities of the official Apple website. Users can explore Apples products, view product details, make purchases using Stripe for payment processing, and experience a seamless user interface.</p>
+          <p style={{fontSize:'0.8rem',margin: '1rem 0'}}>To load app sometimes can take time because this instance types will spin down with inactivity.</p>
           <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('Apple Clone')}>Explore</button>
           <Image className={styles.projects__rigth__project_img} src={AppleImg} alt='insta'/>
         </motion.div>
