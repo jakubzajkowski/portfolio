@@ -33,7 +33,7 @@ export default function About({refAbout}:AboutProps): ReturnType<FC> {
           <h1 className={styles.about__slides}>{"I'm Jakub a 20-year-old aspiring developer and recent graduate from an IT technical school."}</h1>
         </Parallax>
         <Parallax speed={-25} scale={[0,1]} opacity={[0,1]} >
-          <h1 className={styles.about__slides}>{"I'm thrilled to share my journey as I dive into the world of technology. Currently, I'm excitedly preparing to pursue a degree in mechatronics at Warsaw University of Technology."}</h1>
+          <h1 className={styles.about__slides}>{"I'm thrilled to share my journey as I dive into the world of technology. Currently, I'm excitedly preparing to pursue a degree in applied computer science at Warsaw University of Technology."}</h1>
         </Parallax>
         <Parallax speed={-25} scale={[0,1]} >
           <h1 className={styles.about__slides}>{"My passion lies in coding, and I find great joy in working with JavaScript, React, Node.js, and PHP. These versatile languages have allowed me to bring ideas to life and create dynamic, interactive web applications. I believe in the power of technology to transform lives and solve complex problems."}</h1>
