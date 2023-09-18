@@ -1,5 +1,5 @@
-import honeyImg0 from './img/honey_valley_img2.jpg'
-import honeyImg1 from './img/honey_valley_img1.jpg'
+import honeyImg0 from './img/honey_valley_img1.jpg'
+import honeyImg1 from './img/honey_valley_img2.jpg'
 import appleImg0 from './img/apple_img0.jpg'
 import appleImg1 from './img/apple_img1.jpg'
 import xchangeImg0 from './img/xchange_img0.jpg'
@@ -7,7 +7,7 @@ import xchangeImg1 from './img/xchange_img1.jpg'
 import { StaticImageData } from 'next/image'
 
 export interface ProjectListType{
-    title: 'Honey Valley' | 'Apple Clone' | 'xChange Website'
+    title: 'Instagram Clone' | 'Apple Clone' | 'xChange Website' | 'Honey Valley'
     img0: StaticImageData 
     img1: StaticImageData 
     text0:string
@@ -21,8 +21,8 @@ export const ProjectList : ProjectListType[] = [
         title: 'Honey Valley',
         img0: honeyImg0,
         img1: honeyImg1,
-        text0:"Honey Valley is e-commerce web application allows users to register, log in, and purchase jars of honey.",
-        text1: "Front-end: React, Styled-components, Redux, Redux-thunk Back-end: Node.js, Express.js, MySql, JWT token, prisma",
+        text0:"Honey Shop on the Internet this web application allows users to register, log in, and purchase jars of honey.",
+        text1: "Front-end: React, Styled-components, Redux, Redux-Thunk, React-router, Back-end: Node.js, Express.js, MySql, JWT token, Prisma, Stripe",
         gitHub: process.env.NEXT_PUBLIC_INSTACLONE_GITHUB_LINK,
         website: process.env.NEXT_PUBLIC_INSTACLONE_LINK
     },
