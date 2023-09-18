@@ -1,5 +1,5 @@
-import instagramImg0 from './img/instagram_img0.jpg'
-import instagramImg1 from './img/instagram_img1.jpg'
+import honeyImg0 from './img/honey_valley_img2.jpg'
+import honeyImg1 from './img/honey_valley_img1.jpg'
 import appleImg0 from './img/apple_img0.jpg'
 import appleImg1 from './img/apple_img1.jpg'
 import xchangeImg0 from './img/xchange_img0.jpg'
@@ -7,7 +7,7 @@ import xchangeImg1 from './img/xchange_img1.jpg'
 import { StaticImageData } from 'next/image'
 
 export interface ProjectListType{
-    title: 'Instagram Clone' | 'Apple Clone' | 'xChange Website'
+    title: 'Honey Valley' | 'Apple Clone' | 'xChange Website'
     img0: StaticImageData 
     img1: StaticImageData 
     text0:string
@@ -18,11 +18,11 @@ export interface ProjectListType{
 
 export const ProjectList : ProjectListType[] = [
     {
-        title: 'Instagram Clone',
-        img0: instagramImg0,
-        img1: instagramImg1,
-        text0:"InstaClone is a feature-rich web application that emulates the core functionalities of the popular social media platform, Instagram. With InstaClone, users can create profiles, share photos, follow other users, and engage with a vibrant community. Whether you're looking to connect with friends, share your creative work, or explore captivating content",
-        text1: "Front-end: React,Websockets,CSS Back-end: Node.js, Express.js, MongoDB, Session, Multer, Mongoose",
+        title: 'Honey Valley',
+        img0: honeyImg0,
+        img1: honeyImg1,
+        text0:"Honey Valley is e-commerce web application allows users to register, log in, and purchase jars of honey.",
+        text1: "Front-end: React, Styled-components, Redux, Redux-thunk Back-end: Node.js, Express.js, MySql, JWT token, prisma",
         gitHub: process.env.NEXT_PUBLIC_INSTACLONE_GITHUB_LINK,
         website: process.env.NEXT_PUBLIC_INSTACLONE_LINK
     },
