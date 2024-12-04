@@ -44,6 +44,16 @@ export const ProjectList : ProjectListType[] = [
         gitHub: process.env.NEXT_PUBLIC_XCHANGE_GITHUB_LINK,
         website: process.env.NEXT_PUBLIC_XCHANGE_LINK
     },
+    {
+        title: 'Honey Valley',
+        img0: honeyImg0,
+        img1: honeyImg1,
+        text0:"Honey Shop on the Internet this web application allows users to register, log in, and purchase jars of honey.",
+        text1: "Front-end: React, Styled-components, Redux, Redux-Thunk, React-router, Back-end: Node.js, Express.js, MySql, JWT token, Prisma, Stripe",
+        gitHub: process.env.NEXT_PUBLIC_INSTACLONE_GITHUB_LINK,
+        website: null
+    },
+    
      
 ]
 

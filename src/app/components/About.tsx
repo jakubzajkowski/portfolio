@@ -3,7 +3,6 @@ import styles from '../page.module.scss'
 import { FC,useContext,useState,useEffect } from 'react'
 import { ModeContext,ModeContextType } from '../ModeContext';
 import { Parallax } from 'react-scroll-parallax';
-//""
 interface AboutProps{
     refAbout: any
 }
@@ -12,7 +11,7 @@ export default function About({refAbout}:AboutProps): ReturnType<FC> {
   const {mode,setMode} = useContext(ModeContext) as ModeContextType
   const [enterBlack,setEnterBlack]:[boolean, React.Dispatch<React.SetStateAction<boolean>>]=useState(false)
   useEffect(()=>{
-    if (enterBlack){
+    if (enterBlack && mode==true){
       setMode(false)
     }
     else{
@@ -27,22 +26,16 @@ export default function About({refAbout}:AboutProps): ReturnType<FC> {
           <h1 className={styles.about__slides_section_ending}>About me</h1>
         </Parallax>
         <Parallax speed={50} scale={[0.05,1.2]} >
-          <h1 className={styles.about__slides}>Welcome to my Story!</h1>
+          <h1 className={styles.about__slides}>{"Currently, I am pursuing a degree in Computer Science at the Warsaw University of Technology, where I deepen my knowledge and apply it to real-world challenges."}</h1>
         </Parallax>
         <Parallax speed={20} >
-          <h1 className={styles.about__slides}>{"I'm Jakub a 20-year-old aspiring developer and recent graduate from an IT technical school."}</h1>
+          <h1 className={styles.about__slides}>{"I have experience working on various projects, including the development and enhancement of web applications, plugins, and APIs using technologies such as React, Java, PHP, and JavaScript. "}</h1>
         </Parallax>
         <Parallax speed={-25} opacity={[0,1]} >
-          <h1 className={styles.about__slides}>{"I'm thrilled to share my journey as I dive into the world of technology."}</h1>
-        </Parallax>
-        <Parallax speed={-25} opacity={[0,1]}>
-          <h1 className={styles.about__slides}>{"My passion lies in coding, and I find great joy in working with JavaScript, React, Node.js, and PHP. These versatile languages have allowed me to bring ideas to life and create dynamic, interactive web applications. I believe in the power of technology to transform lives and solve complex problems."}</h1>
+          <h1 className={styles.about__slides}>{"I contributed to the development of the Lizmap platforms and worked on a plugin for GeoServer, I also played a role in a project for the Institute of Forest Research (IBL), where I developed a React PWA application and contributed to the geospatial portal website"}</h1>
         </Parallax>
         <Parallax speed={20} opacity={[0.5,1]}>
-          <h1 className={styles.about__slides}>{"I'm constantly seeking new challenges and opportunities to expand my knowledge and collaborate with others in the tech community. Whether it's designing intuitive user interfaces or building robust backend systems, I'm eager to contribute my skills and make a positive impact."}</h1>
-        </Parallax>
-        <Parallax speed={20} >
-          <h1 className={styles.about__slides}>{"Feel free to reach out if you have any questions or if you're interested in collaborating on exciting projects. Let's connect and create something extraordinary together!"}</h1>
+          <h1 className={styles.about__slides}>{"Driven by my passion for programming, I am always eager to learn, grow, and contribute to meaningful projects that push the boundaries of technology."}</h1>
         </Parallax>
         <Parallax speed={20} opacity={[0,1]} >
           <h1 className={styles.about__slides_section_ending}>My Skills</h1>

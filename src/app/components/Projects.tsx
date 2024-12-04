@@ -36,9 +36,24 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
         <h1>{"Let Me Show You My Projects"}</h1>
       </div>
       <div className={styles.projects__right}>
+        <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
+          <h1>Plugin Authorization for ARiMR</h1>
+          <p style={{margin:'2rem 0 2rem 0'}}>I participated in the development of a custom authorization plugin for the Agricultural Market Agency (ARiMR)</p>
+          <button className={styles.projects__rigth__project_btn}>Explore</button>
+        </motion.div>
+        <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
+          <h1>Geoportal Lizmapa for the Institute of Forest Research (IBL)</h1>
+          <p style={{margin:'2rem 0 2rem 0'}}>As part of a project for the Institute of Forest Research (IBL), I contributed to the development and modification of the Lizmapa geoportal.</p>
+          <button className={styles.projects__rigth__project_btn}>Explore</button>
+        </motion.div>
+        <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
+          <h1>PWA app for the Institute of Forest Research (IBL)</h1>
+          <p style={{margin:'2rem 0 2rem 0'}}>The app was designed to improve access to forestry data collected through drone imagery.</p>
+          <button className={styles.projects__rigth__project_btn}>Explore</button>
+        </motion.div>
         <motion.div className={styles.projects__rigth__project}  initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
-          <h1>Instagram Website Clone</h1>
-          <p style={{margin:'2rem 0 2rem 0'}}>Honey Valley is e-commerce web application where you can buy some honey.</p>
+          <h1>Honey Valley Website</h1>
+          <p style={{margin:'2rem 0 2rem 0'}}>Honey Valley is e-commerce web application self project where you can buy some honey.</p>
           <p style={{fontSize:'0.8rem',margin: '1rem 0'}}>To load app sometimes can take time because this instance types will spin down with inactivity.</p>
           <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('Honey Valley')}>Explore</button>
           <Image className={styles.projects__rigth__project_img} src={HoneyShop} alt='insta'/>
@@ -53,7 +68,6 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
         <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>XChange Website</h1>
           <p style={{margin:'2rem 0 2rem 0'}}>XchangeStock is a web application that allows users to view daily currency prices, explore historical currency charts, and stay updated with the latest news related to currencies. Built with php laravel and mysql</p>
-          <button className={styles.projects__rigth__project_btn}>Working on</button>
           <Image className={styles.projects__rigth__project_img} src={XchangeImg} alt='insta'/>
         </motion.div>
       </div>

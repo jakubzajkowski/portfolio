@@ -35,9 +35,8 @@ export default function Header({refContact,refHeader,refAbout,refSkills,refProje
             <p>{"Hello I'm"}</p>
             <h1 style={{fontSize:mobile ? '40px':'60px'}}>Jakub</h1>
             <h1 style={{fontSize:mobile ? '60px' : '80px'}}>Zajkowski</h1>
-            <p>{"I'm 20 years old applied Computer Science student in Warsaw University of Technology"}</p>
-            <p>{"Programming is one of my biggest hobby and"}</p>
-            <p>{"it's my passion since I was 17 years old"}</p>
+            <p>{"I'm a passionate software developer with experience in Open Source projects"}</p>
+            <p>{"Programming is one of my biggest hobby"}</p>
         </div>
     </div>
   )
