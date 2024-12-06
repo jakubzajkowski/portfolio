@@ -33,23 +33,23 @@ export default function Projects({refProjects}:ProjectsProps): ReturnType<FC>{
     {isModal && <ProjectModal setIsModal={setIsModal} content={modalContent[0]} isModal={isModal}/>}
     <div className={styles.projects} ref={refProjects} style={{color: mode ? 'black' : 'white'}}>
       <div className={styles.projects__left}>
-        <h1>{"Let Me Show You My Projects"}</h1>
+        <h1>{"Let Me Show You Projects"}</h1>
       </div>
       <div className={styles.projects__right}>
         <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>Plugin Authorization for ARiMR</h1>
           <p style={{margin:'2rem 0 2rem 0'}}>I participated in the development of a custom authorization plugin for the Agricultural Market Agency (ARiMR)</p>
-          <button className={styles.projects__rigth__project_btn}>Explore</button>
+          <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('arimr')}>Explore</button>
         </motion.div>
         <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>Geoportal Lizmapa for the Institute of Forest Research (IBL)</h1>
           <p style={{margin:'2rem 0 2rem 0'}}>As part of a project for the Institute of Forest Research (IBL), I contributed to the development and modification of the Lizmapa geoportal.</p>
-          <button className={styles.projects__rigth__project_btn}>Explore</button>
+          <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('geoportal')}>Explore</button>
         </motion.div>
         <motion.div className={styles.projects__rigth__project} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>PWA app for the Institute of Forest Research (IBL)</h1>
           <p style={{margin:'2rem 0 2rem 0'}}>The app was designed to improve access to forestry data collected through drone imagery.</p>
-          <button className={styles.projects__rigth__project_btn}>Explore</button>
+          <button className={styles.projects__rigth__project_btn} onClick={()=>handelModal('pwa')}>Explore</button>
         </motion.div>
         <motion.div className={styles.projects__rigth__project}  initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration:0.8,delay:0.3}}>
           <h1>Honey Valley Website</h1>
